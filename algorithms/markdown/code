@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int findIndex(const std::vector<int>& vec, int value)
+{
+    // Your implementation here
+    
+auto it = std::find(vec.begin(), vec.end(), value);
+    if (it != vec.end())
+        return static_cast<int>(it - vec.begin());
+         
+    else
+         return -1;
+             
+             }
+int main()
+{
+    std::vector<int> numbers = {10, 20, 30, 40, 50};
+    std::cout << findIndex(numbers, 30) << std::endl;
+    std::cout << findIndex(numbers, 100) << std::endl;
+    std::cout << findIndex(numbers, 10) << std::endl;
+    return 0;
+}
