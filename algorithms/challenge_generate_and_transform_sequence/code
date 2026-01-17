@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <random>
+
+std::vector<int> generateSequence(int n);
+std::vector<int> squareElements(const std::vector<int>& input);
+
+int main()
+{
+    std::vector<int> original = generateSequence(10);
+    std::vector<int> squared = squareElements(original);
+    return 0;
+}
